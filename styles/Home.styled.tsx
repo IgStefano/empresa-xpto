@@ -1,6 +1,6 @@
 import { Box, styled } from '@mui/material';
 
-export const StyledBox = styled((props) => <Box display="flex" alignItems="center" justifyContent="center" gap="8px" {...props} />)(
+export const StyledBox = styled((props: any) => <Box display="flex" alignItems="center" justifyContent="center" gap="8px" {...props} />)(
     () => ({
       textTransform: 'none',
       fontWeight: 500,

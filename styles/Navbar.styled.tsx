@@ -1,6 +1,6 @@
 import { Box, Button, Tabs, Tab, styled } from '@mui/material';
 
-export const StyledTabs = styled((props) => (
+export const StyledTabs = styled((props: any) => (
     <Tabs
       {...props}
       classes={{scroller: 'invisible'}}
@@ -19,7 +19,7 @@ export const StyledTabs = styled((props) => (
     },
   });
   
-  export const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
+  export const StyledTab = styled((props: any) => <Tab disableRipple {...props} />)(
     () => ({
       textTransform: 'none',
       color: '#1d262b',
@@ -42,7 +42,7 @@ export const StyledTabs = styled((props) => (
     }),
   );
   
-  export const StyledBox = styled((props) => <Box {...props} />)(
+  export const StyledBox = styled((props: any) => <Box {...props} />)(
       () => ({
         backgroundColor: '#f7f8f8', 
         display: 'flex', 
@@ -53,7 +53,7 @@ export const StyledTabs = styled((props) => (
       }),
   );
 
-  export const StyledButton = styled((props) => <Button variant="outlined" {...props} />)(
+  export const StyledButton = styled((props: any) => <Button variant="outlined" {...props} />)(
     () => ({
       backgroundImage: 'linear-gradient(to right, #92f075, #1fbf76)',
       color: "#180f55",
