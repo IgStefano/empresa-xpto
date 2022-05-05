@@ -19,29 +19,33 @@ export default function Topbar(props: {children: string, color: string, backgrou
             label: '(U$) American Dollar'
             },
         ]
-
+  
     const [selectedCurrency, setSelectedCurrency] = useState(currencyOptions[0].country)
 
     return (
         <Box display="flex" justifyContent="space-between" alignItems="center" style={{height: 96, padding: "8px 0px", background: props.background}}>
-            <Typography component="h1" style={{borderLeft: `5px solid ${props.color}`, color: props.color, fontSize: 32, padding: 16, fontWeight: 'bold'}}>
+            <Typography component="h3" style={{borderLeft: `5px solid ${props.color}`, color: props.color, fontSize: 32, padding: 16, fontWeight: 'bold'}}>
             {props.children}
             </Typography>
             {props.currencySelect && <Autocomplete
       id="Currency-select-field"
       sx={{ width: 300, marginRight: '16px' }}
       options={currencyOptions}
+      defaultValue={currencyOptions[0]}
       autoHighlight
       getOptionLabel={(option) => option.label}
       renderOption={(props, option) => (
-        <Box onClick={() => setSelectedCurrency(option.country)} component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-          <Image
+        <Box onClick={() => setSelectedCurrency(option.country)} component="li" style={{padding: 0}} sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+            <Box onClick={() => setSelectedCurrency(option.country)} style={{padding: '6px 0px 6px 16px'}}>
+          <Image 
             width="20"
             height="14"
             src={option.country === 'BR' ? BR : US}
-            alt="Bandeira"
+            alt={`Bandeira ${option.country === 'BR' ? 'Brasileira' : 'Estadunidense'}`}
+            style={{marginLeft: '16px'}}
           />
-          <Typography style={{marginLeft: 8}}>{option.label}</Typography> 
+          </Box>
+          <Typography onClick={() => setSelectedCurrency(option.country)} style={{marginLeft: 8, width: '100%', padding: '6px 16px 6px 0px'}}>{option.label}</Typography> 
         </Box>
       )}
       renderInput={(params) => (
@@ -56,7 +60,7 @@ export default function Topbar(props: {children: string, color: string, backgrou
             width="40"
             height="28"
             src={selectedCurrency === 'BR' ? BR : US}
-            alt="Bandeira"
+            alt={`Bandeira ${selectedCurrency === 'BR' ? 'Brasileira' : 'Estadunidense'}`}
           />
             </InputAdornment>)    
           }}
@@ -69,3 +73,4 @@ export default function Topbar(props: {children: string, color: string, backgrou
         </Box>
     )
 }
+
