@@ -1,26 +1,15 @@
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import { Autocomplete, Box, Typography, TextField, InputAdornment } from '@mui/material';
 import Image from 'next/image';
 import BR from '../public/assets/images/br.png';
 import US from '../public/assets/images/us.png';
+import { currencyOptions } from '../helpers/currencyOptions';
+import { TopbarProps } from '../interfaces/props';
 
-export default function Topbar(props: {children: string, color: string, background: string, currencySelect?: boolean}) {
+export default function Topbar(props: TopbarProps) {
 
-    const currencyOptions = 
-        [
-            {
-            currency: 'BRL',
-            country: 'BR',
-            label: '(R$) Brazilian Real'
-            },
-            {
-            currency: 'USD',
-            country: 'US',
-            label: '(U$) American Dollar'
-            },
-        ]
-  
-    const [selectedCurrency, setSelectedCurrency] = useState(currencyOptions[0].country)
+    const [selectedCountry, setSelectedCountry] = useState(currencyOptions[0].country)
+    props.setCurrency && props.setCurrency(selectedCountry === 'BR' ? "BRL" : "USD")
 
     return (
         <Box display="flex" justifyContent="space-between" alignItems="center" style={{height: 96, padding: "8px 0px", background: props.background}}>
@@ -35,8 +24,8 @@ export default function Topbar(props: {children: string, color: string, backgrou
       autoHighlight
       getOptionLabel={(option) => option.label}
       renderOption={(props, option) => (
-        <Box onClick={() => setSelectedCurrency(option.country)} component="li" style={{padding: 0}} sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-            <Box onClick={() => setSelectedCurrency(option.country)} style={{padding: '6px 0px 6px 16px'}}>
+        <Box onClick={() => setSelectedCountry(option.country)} component="li" style={{padding: 0}} sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+            <Box onClick={() => setSelectedCountry(option.country)} style={{padding: '6px 0px 6px 16px'}}>
           <Image 
             width="20"
             height="14"
@@ -45,7 +34,7 @@ export default function Topbar(props: {children: string, color: string, backgrou
             style={{marginLeft: '16px'}}
           />
           </Box>
-          <Typography onClick={() => setSelectedCurrency(option.country)} style={{marginLeft: 8, width: '100%', padding: '6px 16px 6px 0px'}}>{option.label}</Typography> 
+          <Typography onClick={() => setSelectedCountry(option.country)} style={{marginLeft: 8, width: '100%', padding: '6px 16px 6px 0px'}}>{option.label}</Typography> 
         </Box>
       )}
       renderInput={(params) => (
@@ -59,8 +48,8 @@ export default function Topbar(props: {children: string, color: string, backgrou
             <Image
             width="40"
             height="28"
-            src={selectedCurrency === 'BR' ? BR : US}
-            alt={`Bandeira ${selectedCurrency === 'BR' ? 'Brasileira' : 'Estadunidense'}`}
+            src={selectedCountry === 'BR' ? BR : US}
+            alt={`Bandeira ${selectedCountry === 'BR' ? 'Brasileira' : 'Estadunidense'}`}
           />
             </InputAdornment>)    
           }}

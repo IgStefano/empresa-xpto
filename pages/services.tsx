@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material';
+import LoremIpsum from '../helpers/LoremIpsum';
 import { StyledH2, StyledP } from '../styles/Services.styled'
-import LoremIpsum from '../helpers/loremipsum';
-
 
 export default function Services() {
     return (
@@ -9,7 +8,7 @@ export default function Services() {
             <Box style={{padding: 16}}>
                 <Box component="header" style={{backgroundColor: '#fff', borderRadius: 16}}>
                     <Typography component="h1" style={{fontSize: 32, textAlign: 'center', padding: 32}}>Serviços da XPTO, <Typography style={{fontSize: 16}} component="span">o que exatamente fazemos?</Typography></Typography>
-                <Box display="flex" gap="16px" style={{backgroundColor: '#f7f8f8', padding: '32px 64px', borderRadius: 16}}>
+                <Box display="flex" gap="16px" style={{backgroundColor: '#ecf4f4', padding: '32px 64px', borderRadius: 16}}>
                     <Box>
                     <StyledH2 color="#0b582c">
                     Matriz de rastreabilidade

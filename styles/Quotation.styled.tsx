@@ -1,12 +1,12 @@
 import { Box, Button, Typography, styled } from '@mui/material';
 
-export const StyledBox = styled((props: any) => <Box {...props} />)(
+export const StyledContainer = styled((props: any) => <Box {...props} />)(
     () => ({
         backgroundImage: 'linear-gradient(to right, #1fbf76, #92f075)', 
         padding: "32px 32px 24px 32px", 
         textAlign: "center",
         marginTop: "16px",
-        borderRadius: "16px 16px 0px 0px",
+        borderRadius: "32px 32px 0px 0px",
         fontWeight: "bolder",
     }),
 );
@@ -31,3 +31,17 @@ export const StyledButton = styled((props: any) => <Button {...props} />)(
         borderRadius: "8px"
     })
 );
+
+export const StyledBox = styled((props: any) => <Box {...props} />)(
+    () => ({
+        backgroundColor: "#fff", 
+        borderRadius: "0px 0px 32px 32px", 
+        height: "550px", 
+        width: "100%", 
+        paddingTop: "8px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+    }),
+);
+

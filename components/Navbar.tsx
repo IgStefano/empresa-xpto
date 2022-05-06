@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
         <Box component="header" style={{backgroundImage: "linear-gradient(to right, #92f075, #70d499)"}}>
-            <StyledBox component="nav" sx={{boxShadow: 10}}>
+            <StyledBox component="nav"W>
                 <Box>
                     <Image src="/../public/assets/images/logo_xpto_color.png" alt="XPTO Company" width="160px" height="32px" />
                 </Box>
