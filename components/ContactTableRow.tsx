@@ -11,7 +11,7 @@ export default function ContactTableRow(props: ContactTableRowProps) {
                 {getIcon(props.boxIcon)}
                 </TableCell> 
                 <TableCell style={{background: props.rowBackground, width: "100%"}}>
-                    <Typography component="p" style={{fontWeight: "bold", textDecoration: `${props.isLink === true ? "underline" : ""}`, textAlign: "end", opacity: 0.7}}>
+                    <Typography component="p" style={{fontWeight: "bold", textDecoration: `${props.isLink === true ? "underline" : "initial"}`, textAlign: "end", opacity: 0.7}}>
                     {props.firstAddressLine && props.firstAddressLine}
                     {props.rowText && props.rowText}
                     </Typography>

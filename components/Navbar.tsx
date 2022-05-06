@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import { SetStateAction, Dispatch } from 'react'
 import { StyledBox, StyledButton, StyledTabs, StyledTab } from '../styles/Navbar.styled';
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,15 +14,15 @@ export default function Navbar() {
                 <Box sx={{display: 'flex', gap: '32px'}}>
                 <StyledTabs aria-label="Tabs for XPTO Company">
           <Link href="/services">
-             <StyledTab label="Serviços" />
+             <StyledTab value="0" label="Serviços" />
           </Link>
           <Link href="/quotation">
-            <StyledTab label="Orçamentos" />
+            <StyledTab value="1" label="Orçamentos" />
           </Link>
           <Link href="/contact">
-            <StyledTab label="Contato" />
+            <StyledTab value="2" label="Contato" />
           </Link>
-            <StyledTab disabled label="Login" />
+            <StyledTab value="3" disabled label="Login" />
         </StyledTabs>
         <Box display="flex" flexDirection="column" >
             <Typography component="span" sx={{fontSize: 10, fontWeight: "bold", opacity: 0.2}}>Comece por aqui</Typography>
