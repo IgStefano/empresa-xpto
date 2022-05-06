@@ -2,12 +2,13 @@ import { YouTube, Instagram, LinkedIn, Facebook, WhatsApp } from '@mui/icons-mat
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import FooterBox from './FooterBox';
+import LogoBranco from "/../public/assets/images/logo_xpto_branco.png"
 
 export default function Footer() {
     return <Box style={{backgroundColor: "#0b582c"}}>
         <Box component="footer" display="flex" justifyContent="space-evenly" gap="16px" style={{backgroundColor: "#1fbf76", padding: "24px 32px 32px", borderRadius: "0px 0px 12px 12px"}}>
         <Box display="flex" flexDirection="column" gap="8px" style={{marginLeft: "-80px"}}>
-            <Image src="/../public/assets/images/logo_xpto_branco.png" alt="XPTO Company" width="160px" height="32px" />
+            <Image src={LogoBranco} alt="XPTO Company" width="160px" height="32px" />
             <Typography component="span" style={{fontSize: "8px", color: "#fff"}}>
             Copyright © XPTO company 2019
             </Typography>
