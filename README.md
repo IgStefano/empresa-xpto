@@ -1,6 +1,6 @@
 {English Below}
 
-Mini aplicação web construída a partir de um protótipo em PDF.
+Mini aplicação web construída a partir de um protótipo em PDF. Landing page para uma empresa fictícia.
 Tecnologias utilizadas:
 - React
 - Next.js
@@ -14,7 +14,7 @@ Quaisquer comentários voltados a possíveis melhoras no código são profundame
 
 ---
 
-Small web app built from a prototype in PDF.
+Small web app built from a prototype in PDF. It is a landing page for a made-up company.
 Technologies applied:
 - React
 - Next.js
