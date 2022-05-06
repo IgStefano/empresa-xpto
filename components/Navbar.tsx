@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { StyledBox, StyledButton, StyledTabs, StyledTab } from '../styles/Navbar.styled';
 import Image from 'next/image'
 import Link from 'next/link'
-import LogoColor from "/../public/assets/images/logo_xpto_color.png"
+import LogoColor from "../public/assets/images/logo_xpto_color.png"
 
 export default function Navbar() {
 

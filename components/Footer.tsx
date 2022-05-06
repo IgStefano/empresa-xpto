@@ -2,7 +2,7 @@ import { YouTube, Instagram, LinkedIn, Facebook, WhatsApp } from '@mui/icons-mat
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import FooterBox from './FooterBox';
-import LogoBranco from "/../public/assets/images/logo_xpto_branco.png"
+import LogoBranco from "../public/assets/images/logo_xpto_branco.png"
 
 export default function Footer() {
     return <Box style={{backgroundColor: "#0b582c"}}>
