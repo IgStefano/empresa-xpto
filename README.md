@@ -1,6 +1,6 @@
 {English Below}
 
-Mini aplicação web construída a partir de um protótipo em PDF. Landing page para uma empresa fictícia.
+Mini aplicação web construída a partir de um protótipo em PDF. Landing page para uma empresa fictícia. No momento, apenas a versão para telas de computador está disponível, não é um site responsivo ainda.
 Tecnologias utilizadas:
 - React
 - Next.js
@@ -15,7 +15,7 @@ Deploy: https://empresa-xpto.vercel.app/full
 
 ---
 
-Small web app built from a prototype in PDF. It is a landing page for a made-up company.
+Small web app built from a prototype in PDF. It is a landing page for a made-up company. At the moment, only the desktop view is available; the website isn't responsive yet.
 Technologies applied:
 - React
 - Next.js
